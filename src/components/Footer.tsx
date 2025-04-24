@@ -1,208 +1,198 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Globe, 
-  Instagram, 
-  Twitter, 
-  Facebook, 
-  Youtube, 
-  Mail, 
-  ArrowRight 
-} from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const year = new Date().getFullYear();
-
   return (
-    <footer className="bg-gray-100 dark:bg-gray-800 mt-12">
-      <div className="container-custom py-12 md:py-16">
+    <footer className="bg-gray-900 text-gray-300">
+      <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Brand and description */}
-          <div className="col-span-1 lg:col-span-1">
-            <Link 
-              to="/"
-              className="flex items-center gap-2 text-xl font-display font-bold text-primary-600 dark:text-primary-400"
-            >
-              <Globe className="h-7 w-7" />
-              <span>VisionVerse</span>
-            </Link>
-            <p className="mt-4 text-gray-600 dark:text-gray-400">
-              Discover and explore beautiful creative content from around the world. Your gateway to visual inspiration and artistic excellence.
+          {/* Company Info */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent mb-4">
+              Horizon
+            </h3>
+            <p className="text-gray-400 max-w-xs">
+              Empowering businesses to reach new heights through innovative solutions and strategic planning.
             </p>
-            
-            {/* Social icons */}
-            <div className="mt-6 flex items-center gap-4">
+            <div className="flex space-x-4 pt-4">
               <a 
                 href="#" 
-                className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a 
-                href="#" 
-                className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a 
-                href="#" 
-                className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a 
                 href="#" 
-                className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                aria-label="YouTube"
+                className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
+                aria-label="Twitter"
               >
-                <Youtube className="h-5 w-5" />
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a 
+                href="#" 
+                className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a 
+                href="#" 
+                className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
               </a>
             </div>
           </div>
-          
-          {/* Quick links */}
-          <div className="col-span-1">
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-3">
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4 border-b border-gray-700 pb-2">Quick Links</h4>
+            <ul className="space-y-2">
               <li>
-                <Link 
-                  to="/" 
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/explore" 
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                >
-                  Explore
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/featured" 
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                >
-                  Featured
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/categories" 
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                >
-                  Categories
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/about" 
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Support */}
-          <div className="col-span-1">
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link 
-                  to="/help" 
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                >
-                  Help Center
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/contact" 
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                >
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/terms" 
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                >
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/privacy" 
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/cookies" 
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                >
-                  Cookie Policy
-                </Link>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Newsletter */}
-          <div className="col-span-1 lg:col-span-1">
-            <h3 className="text-lg font-semibold mb-4">Subscribe to Our Newsletter</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Stay updated with the latest content and news.
-            </p>
-            
-            <form className="space-y-2">
-              <div className="flex items-center">
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  className="input flex-grow"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="ml-2 p-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors"
-                  aria-label="Subscribe"
-                >
-                  <ArrowRight className="h-5 w-5" />
-                </button>
-              </div>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                By subscribing, you agree to our Terms of Service and Privacy Policy.
-              </p>
-            </form>
-            
-            {/* Contact info */}
-            <div className="mt-6">
-              <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-                <Mail className="h-4 w-4" />
                 <a 
-                  href="mailto:contact@visionverse.com" 
-                  className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  href="#" 
+                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
                 >
-                  contact@visionverse.com
+                  <ExternalLink className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  Home
                 </a>
-              </div>
+              </li>
+              <li>
+                <a 
+                  href="#" 
+                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#" 
+                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  Services
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#" 
+                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#" 
+                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4 border-b border-gray-700 pb-2">Our Services</h4>
+            <ul className="space-y-2">
+              <li>
+                <a 
+                  href="#" 
+                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  Strategic Consulting
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#" 
+                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  Digital Transformation
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#" 
+                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  Product Innovation
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#" 
+                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  Growth Marketing
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#" 
+                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  UI/UX Design
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4 border-b border-gray-700 pb-2">Contact Us</h4>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <MapPin className="h-5 w-5 text-blue-400 mr-3 mt-1 flex-shrink-0" />
+                <span>123 Business Avenue, Tech City, TC 10010, USA</span>
+              </li>
+              <li className="flex items-center">
+                <Phone className="h-5 w-5 text-blue-400 mr-3 flex-shrink-0" />
+                <span>+1 (555) 123-4567</span>
+              </li>
+              <li className="flex items-center">
+                <Mail className="h-5 w-5 text-blue-400 mr-3 flex-shrink-0" />
+                <span>info@horizoncompany.com</span>
+              </li>
+            </ul>
+            <div className="mt-6">
+              <a 
+                href="#" 
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition-colors duration-300"
+              >
+                Get in Touch
+              </a>
             </div>
           </div>
         </div>
-        
-        {/* Copyright */}
-        <div className="mt-12 pt-6 border-t border-gray-200 dark:border-gray-700 text-center text-gray-600 dark:text-gray-400">
-          <p>&copy; {year} VisionVerse. All rights reserved.</p>
+
+        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm text-gray-500 mb-4 md:mb-0">
+            &copy; {new Date().getFullYear()} Horizon. All rights reserved.
+          </p>
+          <div className="flex space-x-6">
+            <a href="#" className="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300">
+              Privacy Policy
+            </a>
+            <a href="#" className="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300">
+              Terms of Service
+            </a>
+            <a href="#" className="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300">
+              Cookie Policy
+            </a>
+          </div>
         </div>
       </div>
     </footer>

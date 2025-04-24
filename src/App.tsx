@@ -1,26 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from './contexts/ThemeContext';
-import Layout from './components/Layout';
-import HomePage from './pages/HomePage';
-import DetailPage from './pages/DetailPage';
-import SearchPage from './pages/SearchPage';
-import NotFoundPage from './pages/NotFoundPage';
+import Navbar from './components/Navbar';
+import MainPage from './pages/MainPage';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <ThemeProvider>
-      <Router>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/item/:id" element={<DetailPage />} />
-            <Route path="/search" element={<SearchPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-        </Layout>
-      </Router>
-    </ThemeProvider>
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <MainPage />
+      <Footer />
+    </div>
   );
 }
 
